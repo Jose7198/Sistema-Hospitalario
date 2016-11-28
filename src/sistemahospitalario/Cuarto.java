@@ -12,7 +12,6 @@ package sistemahospitalario;
 public class Cuarto {
     private int numero;
     private Piso piso;
-    private Persona persona;
 
     public int getNumero() {
         return numero;
@@ -30,18 +29,10 @@ public class Cuarto {
         this.piso = piso;
     }
 
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
     
     public Cuarto(int numero,Piso piso){
-        this.numero=numero*100;
+        this.numero=numero+100;
         this.piso=piso;
-        this.persona=new Persona();
     }
 
 }

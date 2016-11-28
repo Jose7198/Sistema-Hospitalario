@@ -9,6 +9,18 @@ package sistemahospitalario;
  *
  * @author JoseLuis
  */
-public class Funcionario {
+public class Funcionario extends Persona {
+    private String ci;
+
+    public String getCi() {
+        return ci;
+    }
+
+    public void setCi(String ci) {
+        this.ci = ci;
+    }
     
+    public void registrarPaciente(Paciente paciente, String nombre,int estado,Medico medico,Seguro seguro){
+        paciente.setNombre(nombre);
+    }
 }

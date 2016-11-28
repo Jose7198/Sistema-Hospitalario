@@ -37,6 +37,19 @@ public class SistemaHospitalario {
                     break;
                 case 1:
                     int usuario;
+                    Piso[] p;
+                    p = new Piso[h.getCapacidad()/15];
+                    for(int i=0;i<(h.getCapacidad()/15);i++){
+                        p[i]=new Piso(i,h);
+                    }
+                    Habitacion[] hab;
+                    hab= new Habitacion[h.getCapacidad()/3];
+                    Oficina[] o;
+                    o= new Oficina[h.getCapacidad()/3];
+                    for(int i=0;i<(h.getCapacidad()/3);i++){
+                        hab[i]=new Habitacion(i,p[i/5]);
+                        o[i]=new Oficina(i,p[i/5]);
+                    }
                     do{
                         System.out.println("¿Qué tipo de usuario es?");
                         System.out.println("1. Funcionario");
@@ -53,6 +66,11 @@ public class SistemaHospitalario {
                                 break;
                             case 2:
                                 System.out.println("Usted eligio medico");
+                                System.out.println("Por favor, ingrese su nombre distinguiendo entre mayusculas y minusculas ");
+                                String userd=sc.nextLine();
+                                for(int i=0;i<=(h.getCapacidad()*(2/3));i++){
+                                    
+                                }
                                 break;
                             case 3:
                                 System.out.println("Usted eligio paciente");

@@ -29,8 +29,8 @@ public class Piso {
         this.hospital = hospital;
     }
  
-    public Piso(Hospital hospital){
-        this.numero=1;
+    public Piso(int numero,Hospital hospital){
+        this.numero=numero;
         this.hospital=hospital;
     }
 }
